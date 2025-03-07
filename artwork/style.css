@@ -1,0 +1,99 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+}
+/*
+.center-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+*/
+.rotate-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate 30s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 마우스 오버 시 애니메이션 정지 */
+.rotate-container:hover {
+    animation-play-state: paused;
+}
+
+.text {
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+}
+
+/* 마우스 오버 시 확대 및 색상 변경 */
+.text:hover {
+    transform: scale(1.5);
+    color: yellow;
+}
+
+/* 포트폴리오 텍스트 */
+.portfolio-text {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    right: 20px;
+    top: 50%;
+    transform: rotate(90deg);
+    font-family: 'Courier New', monospace;
+}
+.line {
+    position: absolute;
+    width: 2px;
+
+    top: 50%;
+    left: 50%;
+    transform-origin: center top;
+}
+
+.line-1 {
+    height: 180px;
+    transform: rotate(-90deg) translateY(-150px);
+    background: rgb(220, 253, 1);
+    
+}
+.info-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Courier New', monospace;
+    opacity: 0.8;
+}
+
